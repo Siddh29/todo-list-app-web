@@ -120,12 +120,3 @@ toggleButton.addEventListener('click', () => {
   }
 });
 
-// On page load, restore theme choice from localStorage
-window.addEventListener('DOMContentLoaded', () => {
-  const savedTheme = localStorage.getItem('theme');
-  if (savedTheme === 'dark') {
-    document.body.classList.add('dark-mode');
-    toggleButton.textContent = '☀️ Light Mode';
-  }
-});
-
