@@ -249,11 +249,3 @@ body {
   background: linear-gradient(135deg, #fb96c6 60%, #ee337b 100%);
   box-shadow: 0 0px 12px #fb96c6;
 }
-:root {
-  --bg-light: #ffffff;
-  --bg-dark: #121212;
-  --text-light: #333333;
-  --text-dark: #eeeeee;
-  --accent-color: #ee337b;
-  --accent-light: #fb96c6;
-}
