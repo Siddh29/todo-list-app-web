@@ -24,7 +24,7 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 30px;
-  color: #fff;
+  color: #66ff00;
   border-radius: 20px;
   box-shadow: 0 4px 30px rgba(238, 51, 123, 0.1);
   border: 3px solid rgba(238, 51, 123, 0.26);
@@ -228,3 +228,4 @@ body {
   background: linear-gradient(135deg, #fb96c6 60%, #ee337b 100%);
   box-shadow: 0 0px 12px #fb96c6;
 }
+
