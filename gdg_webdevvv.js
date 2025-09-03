@@ -105,3 +105,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
   loadTasksFromLocalStorage();
 });
+const toggleButton = document.getElementById('toggle-theme');
+
+toggleButton.addEventListener('click', () => {
+  document.body.classList.toggle('dark-mode');
+
+  // Update button text/icon (optional)
+  if (document.body.classList.contains('dark-mode')) {
+    toggleButton.textContent = '☀️ Light Mode';
+    localStorage.setItem('theme', 'dark');
+  } else {
+    toggleButton.textContent = '🌙 Dark Mode';
+    localStorage.setItem('theme', 'light');
+  }
+});
+
+// On page load, restore theme choice from localStorage
+window.addEventListener('DOMContentLoaded', () => {
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+    toggleButton.textContent = '☀️ Light Mode';
+  }
+});
+
