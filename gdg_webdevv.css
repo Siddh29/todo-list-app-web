@@ -229,4 +229,27 @@ body {
   box-shadow: 0 0px 12px #fb96c6;
 }
 
+.input-area button,
+.task-buttons button {
+  transition: transform 0.2s, box-shadow 0.3s, background 0.3s;
+  box-shadow: 0 2px 10px rgba(238, 51, 123, 0.13);
+}
+
+.input-area button:hover,
+.task-buttons button:hover {
+  transform: scale(1.15);
+  box-shadow: 0 4px 20px #ee337b2d;
+  background: linear-gradient(135deg, #ee337b 60%, #fb96c6 100%);
+}
+#task-list input[type="checkbox"] {
+  transition: background 0.3s, transform 0.2s;
+  box-shadow: 0 0px 6px rgba(238, 51, 123, 0.08);
+}
+#task-list input[type="checkbox"]:checked {
+  background: linear-gradient(135deg, #fb96c6 60%, #ee337b 100%);
+  box-shadow: 0 0px 12px #fb96c6;
+}
+
+
+
 
