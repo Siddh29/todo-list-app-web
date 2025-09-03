@@ -1,0 +1,230 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Jost', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url('https://techyardlabs.com/wp-content/uploads/2022/05/web-development-coding-programming-internet-technology-business-concept-web-development-coding-programming-internet-technology-121903546.jpg') center/cover no-repeat;
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.to-do-app {
+  width: 100%;
+  max-width: 400px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 30px rgba(238, 51, 123, 0.1);
+  border: 3px solid rgba(238, 51, 123, 0.26);
+  backdrop-filter: blur(9px);
+}
+.input-area {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 10px;
+}
+.input-area input {
+  flex: 1;
+  padding: 10px 17px;
+  font-size: 1.1rem;
+  border: none;
+  outline: none;
+  border-radius: 22px;
+  background: rgba(238,51,123,0.14);
+  color: #d3d3d3;
+}
+.input-area input::placeholder {
+  color: #e0e0e0;
+}
+.input-area button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  padding: 8px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 1.1rem;
+  background: rgba(238,51,123,0.27);
+  border: 2px solid rgba(238,51,123,0.21);
+  cursor: pointer;
+  transition: 0.2s;
+}
+.input-area button:hover {
+  transform: scale(1.1);
+  background: rgba(238,51,123,0.41);
+}
+.todos-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#task-list {
+  width: 100%;
+  list-style: none;
+  padding: 0;
+}
+#task-list li {
+  background: rgba(238,51,123,0.18);
+  margin-bottom: 15px;
+  padding: 8px 10px;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  transition: box-shadow 0.2s;
+}
+#task-list li:hover {
+  box-shadow: 0 0 10px #ee337b2d;
+}
+#task-list input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(238,51,123,0.24);
+  border-radius: 50%;
+  cursor: pointer;
+  appearance: none;
+  transition: 0.2s;
+}
+#task-list input[type="checkbox"]:checked {
+  background: #ee337b;
+  transform: scale(1.1);
+}
+#task-list span {
+  flex: 1;
+  margin-left: 10px;
+  word-break: break-word;
+  display: block;
+}
+.completed span {
+  text-decoration: line-through;
+  color: #000;
+}
+.task-buttons {
+  display: flex;
+  gap: 10px;
+  margin-right: auto;
+}
+.task-buttons button {
+  background: rgba(238,51,123,0.17);
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  color: #fff;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.task-buttons button:hover {
+  transform: scale(1.2);
+}
+.task-buttons .edit-btn {
+  background: rgba(245, 158, 70, 0.54);
+}
+.task-buttons .delete-btn {
+  background: rgba(239, 68, 68, 0.41);
+}
+.empty-image {
+  width: 140px;
+  margin-top: 35px;
+  display: block;
+}
+.stats-container {
+  width: 100%;
+  padding: 8px;
+  border-radius: 10px;
+  border: 2px solid rgba(255,255,255,0.19);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.details {
+  flex: 1;
+}
+.details h3 {
+  color: #fff;
+}
+.progress-bar {
+  width: 100%;
+  height: 7px;
+  background: rgba(238,51,123,0.14);
+  border-radius: 20px;
+  position: relative;
+  margin-top: 15px;
+}
+#progress {
+  width: 0%;
+  height: 100%;
+  background: #ee337b;
+  border-radius: 20px;
+  transition: width 0.3s;
+}
+#numbers {
+  width: 80px;
+  height: 80px;
+  background: #ee337b;
+  border: 3px solid #fb96c6;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+@media (max-width: 600px) {
+  .container {
+    padding: 5px;
+  }
+  .to-do-app {
+    padding: 0.8rem;
+    gap: 18px;
+  }
+  #numbers {
+    width: 50px;
+    height: 50px;
+    font-size: 1rem;
+  }
+  .input-area input {
+    font-size: 1rem;
+  }
+  #task-list li {
+    font-size: 1rem;
+  }
+}
+@keyframes fadeInTask {
+  from { opacity: 0; transform: translateY(20px);}
+  to   { opacity: 1; transform: translateY(0);}
+}
+#task-list li {
+  animation: fadeInTask 0.5s;
+}
+#task-list input[type="checkbox"] {
+  transition: background 0.3s, transform 0.2s;
+  box-shadow: 0 0px 6px rgba(238, 51, 123, 0.08);
+}
+#task-list input[type="checkbox"]:checked {
+  background: linear-gradient(135deg, #fb96c6 60%, #ee337b 100%);
+  box-shadow: 0 0px 12px #fb96c6;
+}
